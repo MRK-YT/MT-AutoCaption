@@ -57,7 +57,6 @@ async def del_caption(id):
 
 async def get_caption(id):
     try:
-        caption = SESSION.query(custom_caption).get(id)
-        return caption
+        return SESSION.query(custom_caption).get(id)
     finally:
         SESSION.close()
